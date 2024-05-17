@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: "DM Sans", sans-serif;
+  background-color: #f8f8fb;
+  color: #282828;
+  overflow-x: hidden;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1300px;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .form-btn {
+    @apply h-[53px] px-10 py-[15px] rounded-[60px] bg-[#7D97FF] disabled:bg-[#CED6F7] disabled:cursor-not-allowed border border-transparent hover:border text-white hover:bg-[#6C82FF] transition duration-300 font-bold;
+  }
+
+  .form-input {
+    @apply h-14 w-full p-3 rounded-[10px] bg-[#FDFDFF] border border-[#B1B7D6] focus:outline-none focus:ring-2 focus:ring-[#7D97FF] focus:ring-opacity-50;
+  }
+
+  .nav-height {
+    @apply h-[110.92px] py-5 px-10;
+  }
+
+  .error-message {
+    @apply text-base text-[#FF4E4E] leading-[20.83px] font-normal mt-[10px];
+  }
+}
