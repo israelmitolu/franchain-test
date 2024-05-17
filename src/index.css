@@ -32,15 +32,15 @@ body {
   }
 
   .form-btn {
-    @apply h-[53px] px-10 py-[15px] rounded-[60px] bg-[#7D97FF] disabled:bg-[#CED6F7] disabled:cursor-not-allowed border border-transparent hover:border text-white hover:bg-[#6C82FF] transition duration-300 font-bold;
+    @apply h-10 lg:h-[53px] px-[24.18px] lg:px-10 py-[9.07px] lg:py-[15px] rounded-[60px] bg-[#7D97FF] disabled:bg-[#CED6F7] disabled:cursor-not-allowed border border-transparent hover:border text-white hover:bg-[#6C82FF] transition duration-300 font-bold text-sm lg:text-base;
   }
 
   .form-input {
-    @apply h-14 w-full p-3 rounded-[10px] bg-[#FDFDFF] border border-[#B1B7D6] focus:outline-none focus:ring-2 focus:ring-[#7D97FF] focus:ring-opacity-50;
+    @apply h-14 w-full p-3 rounded-[10px] bg-[#FDFDFF] border border-[#B1B7D6] focus:outline-none focus:ring-2 focus:ring-[#7D97FF] focus:ring-opacity-50 text-sm lg:text-base;
   }
 
   .nav-height {
-    @apply h-[110.92px] py-5 px-10;
+    @apply h-[61px] lg:h-[110.92px] py-[13px] lg:py-5 px-5 lg:px-10;
   }
 
   .error-message {

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import GradientBg from "../../public/images/Gradient BG.png";
-import DashboardImg from "../../public/icons/Sign up screen SVG.svg";
+import GradientBg from "/images/Gradient BG.png";
+import DashboardImg from "/icons/Sign up screen SVG.svg";
 import { FormDataTypes, FormErrorsTypes } from "../types";
 import { validateForm } from "../utils/formValidation";
 import { ToastContainer, toast } from "react-toastify";
@@ -63,10 +63,10 @@ const SignUp = () => {
       <img
         alt=""
         src={GradientBg}
-        className="fixed top-0 left-0 inset-0 h-full w-[50vw] object-cover pointer-events-none"
+        className="fixed top-0 left-0 inset-0 h-full w-[50vw] object-cover pointer-events-none hidden lg:block"
       />
-      <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-        <div className="flex-center  bg-[#DFEAF0] lg:col-span-5 h-full xl:col-span-6">
+      <div className="lg:flex lg:min-h-screen h-full">
+        <div className="hidden lg:flex items-center justify-center  bg-[#DFEAF0] h-screen lg:w-1/2">
           <div className="z-[1] flex flex-col items-center text-center max-w-[553px] ">
             <img src={DashboardImg} alt="" className="w-full h-[304.68px]" />
             <h2 className="mb-[13px] mt-[34px] font-medium text-[40px] leading-[52.08px]">
@@ -79,12 +79,12 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div className="flex mt-[10vh] px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
-          <div className="max-w-xl lg:max-w-3xl">
-            <h1 className="font-medium text-[35px] leading-[45.57px]">
+        <div className="flex justify-center lg:mt-[10vh] px-[20px] py-8 sm:px-12 lg:px-[60px] lg:py-12 lg:w-1/2">
+          <div className="mt-[101px] mb-[82.77px] md:mt-[154.58px] lg:mt-0 max-w-[624px] lg:max-w-3xl">
+            <h1 className="font-medium text-[30px] lg:text-[35px] leading-[45.57px]">
               Get started with Franchain
             </h1>
-            <p className="text-[20px] leading-[26.04px] mt-[10px]">
+            <p className="text-base lg:text-[20px] leading-[26.04px] lg:mt-[10px]">
               Create an account in 5 minutes
             </p>
             <form
@@ -94,7 +94,7 @@ const SignUp = () => {
               <div className="w-full">
                 <label
                   htmlFor="FirstName"
-                  className="block text-base mb-[10px]"
+                  className="block text-sm lg:text-base mb-[10px]"
                 >
                   First Name
                 </label>
@@ -112,7 +112,10 @@ const SignUp = () => {
               </div>
 
               <div className="w-full">
-                <label htmlFor="LastName" className="block text-base mb-[10px]">
+                <label
+                  htmlFor="LastName"
+                  className="block text-sm lg:text-base mb-[10px]"
+                >
                   Last Name
                 </label>
                 <input
@@ -131,7 +134,7 @@ const SignUp = () => {
               <div className="w-full">
                 <label
                   htmlFor="businessName"
-                  className="block text-base mb-[10px]"
+                  className="block text-sm lg:text-base mb-[10px]"
                 >
                   Business name and HQ location
                 </label>
@@ -151,7 +154,7 @@ const SignUp = () => {
               <div className="w-full">
                 <label
                   htmlFor="workEmail"
-                  className="block text-base mb-[10px]"
+                  className="block text-sm lg:text-base mb-[10px]"
                 >
                   Work Email
                 </label>
@@ -169,7 +172,10 @@ const SignUp = () => {
               </div>
 
               <div className="w-full">
-                <label htmlFor="Password" className="block text-base mb-[10px]">
+                <label
+                  htmlFor="Password"
+                  className="block text-sm lg:text-base mb-[10px]"
+                >
                   Password
                 </label>
                 <input
@@ -191,10 +197,8 @@ const SignUp = () => {
                 </button>
               </div>
 
-              <ToastContainer />
-
               <div className="w-full mt-[10px]">
-                <p className="text-sm leading-[18.23px]">
+                <p className="text-xs lg:text-sm leading-[18.23px]">
                   By clicking "Start Application", I agree to Mercury's{" "}
                   <a
                     href="https://mercury.com/legal/terms"
@@ -235,6 +239,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
